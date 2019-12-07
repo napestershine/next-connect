@@ -29,6 +29,7 @@ const mongooseOptions = {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
+  useUnifiedTopology: true
 };
 
 mongoose.connect(
@@ -65,7 +66,7 @@ app.prepare().then(() => {
     handle(req, res);
   });
 
-  server.get('/static/*', (req, res) => {
+  server.get('/public/*', (req, res) => {
     handle(req, res);
   });
 
