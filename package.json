@@ -1,0 +1,30 @@
+{
+  "name": "next-connect",
+  "version": "1.0.0",
+  "description": "A social network in nextjs",
+  "main": "app.js",
+  "author": "Manu",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server/app.js --watch server",
+    "start": "node server/app.js",
+    "build": "next build",
+    "deploy": "now --public",
+    "alias": "now alias",
+    "remove:deploy": "now rm next-connect"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.0",
+    "helmet": "^3.21.2",
+    "mongoose": "^5.7.13",
+    "morgan": "^1.9.1",
+    "next": "^9.1.4",
+    "passport": "^0.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
