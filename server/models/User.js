@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const { ObjectId } = mongoose.Schema;
-const mongodbErrorHandler = require('mongoose-mmongodb-errors');
+const mongodbErrorHandler = require('mongoose-mongodb-errors');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-const postSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     email: {
       type: String,

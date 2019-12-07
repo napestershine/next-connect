@@ -10,7 +10,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 
 /* Loads all variables from .env file to "process.env" */
-require('dotinv').config();
+require('dotenv').config();
 /* Require our models here so we can use the mongoose.model() singleton to
 reference our models across our app */
 require('./models/Post');
@@ -100,7 +100,7 @@ app.prepare().then(() => {
   }
 
   /** Apply our session configuration to express-session */
-  server.use(session(sesionConfig));
+  server.use(session(sessionConfig));
 
   /** Add passport middleware to set passport up */
   server.use(passport.initialize());
